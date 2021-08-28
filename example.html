@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Skeleton CSS example</title>
+    <meta name="author" content="Eric Christenson">
+    <link href="./skeleton.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 10vh;
+        }
+
+        #imageContainer {
+            height: 375px;
+            width: 326px;
+        }
+
+        #image {
+            height: inherit;
+            width: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="imageContainer" class="skeleton"></div>
+
+
+<script type="text/javascript">
+    const image = `<img alt="Example image" id="image" src="https://images-assets.nasa.gov/image/PIA01370/PIA01370~thumb.jpg">`;
+
+    (function() {
+        setTimeout(() => {
+            setTimeout(() => document.getElementById('imageContainer').innerHTML = image, 1200);
+        }, 300);
+    })();
+</script>
+
+</body>
+</html>
